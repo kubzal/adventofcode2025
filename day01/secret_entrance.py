@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 def load_input(
     url="https://adventofcode.com/2025/day/1/input", filename="day01_input.txt"
-):
+) -> list[str]:
     if os.path.exists(filename):
         print(f"Loading input from file: {filename}")
         with open(filename, "r") as f:
@@ -24,7 +24,7 @@ def load_input(
 
 
 # Part 1
-def dial(position: int = 0, rotation: str = "L1"):
+def dial(position: int = 0, rotation: str = "L1") -> int:
     direction = rotation[0]
     distance = int(rotation[1:])
 
@@ -36,7 +36,7 @@ def dial(position: int = 0, rotation: str = "L1"):
 
 
 # Part 2 (brute force)
-def hit_zero_brute_force(position: int = 0, rotation: str = "L1"):
+def hit_zero_brute_force(position: int = 0, rotation: str = "L1") -> int:
     direction = rotation[0]
     distance = int(rotation[1:])
 
@@ -56,7 +56,7 @@ def hit_zero_brute_force(position: int = 0, rotation: str = "L1"):
 
 
 # Part 2 (more optimal solution)
-def hit_zero_more_optimal(position: int = 0, rotation: str = "L1"):
+def hit_zero_more_optimal(position: int = 0, rotation: str = "L1") -> int:
     direction = rotation[0]
     distance = int(rotation[1:])
 

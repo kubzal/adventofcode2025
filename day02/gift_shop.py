@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 def load_input(
     url="https://adventofcode.com/2025/day/2/input", filename="day02_input.txt"
-):
+) -> list:
     if os.path.exists(filename):
         print(f"Loading input from file: {filename}")
         with open(filename, "r") as f:
@@ -24,7 +24,7 @@ def load_input(
 
 
 # Part 1
-def invalid_id(id: int):
+def invalid_id(id: int) -> bool:
     id = str(id)
     if len(id) % 2 != 0:
         return False
@@ -38,7 +38,7 @@ def invalid_id(id: int):
 
 
 # Part 2
-def invalid_id_at_leat_twice(id: int):
+def invalid_id_at_leat_twice(id: int) -> bool:
     id = str(id)
     max_sequence_len = len(id) // 2
 

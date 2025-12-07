@@ -5,12 +5,10 @@ import requests
 
 from dotenv import load_dotenv
 
-from icecream import ic
-
 
 def load_input(
     url="https://adventofcode.com/2025/day/3/input", filename="day03_input.txt"
-):
+) -> list:
     if os.path.exists(filename):
         print(f"Loading input from file: {filename}")
         with open(filename, "r") as f:
@@ -26,7 +24,7 @@ def load_input(
 
 
 # Part 1
-def largest_possible_joltage(bank: str):
+def largest_possible_joltage(bank: str) -> int:
     bank = str(bank)
 
     batteries_dict = dict()
@@ -54,7 +52,7 @@ def largest_possible_joltage(bank: str):
 
 
 # Part 2
-def largest_possible_joltage_12(bank: str):
+def largest_possible_joltage_12(bank: str) -> int:
     bank = str(bank)
 
     batteries_dict = dict()
